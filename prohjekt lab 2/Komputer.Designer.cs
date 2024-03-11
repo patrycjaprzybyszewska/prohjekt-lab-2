@@ -56,10 +56,12 @@
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Procesor 1", "Procesor 2", "Procesor 3" });
             comboBox1.Location = new Point(45, 89);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(266, 33);
             comboBox1.TabIndex = 1;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // radioButton1
             // 
@@ -71,6 +73,7 @@
             radioButton1.TabStop = true;
             radioButton1.Text = "1000 GB SATA";
             radioButton1.UseVisualStyleBackColor = true;
+            radioButton1.CheckedChanged += radioButton1_CheckedChanged;
             // 
             // button1
             // 
@@ -80,6 +83,7 @@
             button1.TabIndex = 3;
             button1.Text = "OK";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -89,6 +93,7 @@
             button2.TabIndex = 4;
             button2.Text = "ANULUJ";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // textBox2
             // 
@@ -96,6 +101,7 @@
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(113, 31);
             textBox2.TabIndex = 6;
+            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // label2
             // 
@@ -122,6 +128,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(150, 31);
             textBox1.TabIndex = 9;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // label4
             // 
@@ -142,6 +149,7 @@
             radioButton2.TabStop = true;
             radioButton2.Text = "500 GB SATA";
             radioButton2.UseVisualStyleBackColor = true;
+            radioButton2.CheckedChanged += radioButton2_CheckedChanged;
             // 
             // radioButton3
             // 
@@ -153,6 +161,7 @@
             radioButton3.TabStop = true;
             radioButton3.Text = "240 GB SSD";
             radioButton3.UseVisualStyleBackColor = true;
+            radioButton3.CheckedChanged += radioButton3_CheckedChanged;
             // 
             // panel1
             // 
@@ -164,7 +173,7 @@
             panel1.Size = new Size(257, 110);
             panel1.TabIndex = 13;
             // 
-            // Form2
+            // Komputer
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -179,8 +188,9 @@
             Controls.Add(button1);
             Controls.Add(comboBox1);
             Controls.Add(label1);
-            Name = "Form2";
+            Name = "Komputer";
             Text = "Form2";
+            Load += Komputer_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
@@ -194,7 +204,7 @@
         private RadioButton radioButton1;
         private Button button1;
         private Button button2;
-        private TextBox textBox2;
+        public TextBox textBox2;
         private Label label2;
         private Label label3;
         private TextBox textBox1;

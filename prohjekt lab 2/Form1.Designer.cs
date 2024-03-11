@@ -60,6 +60,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(148, 31);
             textBox1.TabIndex = 2;
+          
             // 
             // label1
             // 
